@@ -27,7 +27,7 @@ class PokemonListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Lista de Pokemón'),
+        title: Text('Lista de Pokemón - DogApi'),
       ),
       body: Consumer<PokemonProvider>(
         builder: (context, provider, child) {
@@ -40,7 +40,7 @@ class PokemonListScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               Pokemon pokemon = provider.pokemonList[index];
               return ListTile(
-                title: Text(pokemon.name),
+                title: Text(pokemon.url),
                 onTap: () {
                   // Puedes agregar una navegación a un detalle de Pokémon aquí
                 },

@@ -3,10 +3,10 @@ import 'package:http/http.dart' as http;
 import '../models/pokemon.dart';
 
 class ApiService {
-  final String baseUrl = "https://pokeapi.co/api/v2";
+  final String baseUrl = "https://dog.ceo/api/breeds/image";
 
   Future<List<Pokemon>> fetchPokemonList() async {
-    final response = await http.get(Uri.parse('$baseUrl/pokemon?limit=10'));
+    final response = await http.get(Uri.parse('$baseUrl/random'));
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
